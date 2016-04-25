@@ -1,0 +1,54 @@
+body {
+	background-image: url(images/frenchstucco.png);
+}
+
+#title {
+	font-family: 'Gabriela', serif;
+	text-align: center;
+	font-size: 48px;
+	text-shadow: 1px 2px #7F7E7E;
+	color: #003660;
+}
+
+#info  {
+	font-family: 'Sanchez', serif;
+	text-align: center;
+	color: #003660;
+}
+
+a {
+	color: #003660;
+	text-decoration: none;
+	transition: .7s;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #F26C4F;
+
+}
+
+hr {
+	height: 5px;
+	background-color: #095595;
+	background-image: linear-gradient(to right, #89BCE7, #3A88C9, #095595)
+
+}
+h3 {
+	font-family: 'Sanchez', serif;
+	
+}
+
+h4 {
+	font-family: 'Sanchez', serif;
+
+}
+
+li {
+	font-family: 'Glegoo', serif;
+
+}
+
+p {
+	font-family: 'Glegoo', serif;	
+}

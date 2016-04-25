@@ -1,0 +1,933 @@
+@media all {
+  
+  body {
+  background-image: url("images/brickwall.png");
+  background-attachment: fixed;
+}
+
+/*Hamburger Nav Icon and Down Arrow Nav Icon Css*/
+
+.hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 64px;
+  height: 64px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+
+  transition: .7s;
+  z-index: 10;
+}
+
+.hamburger:hover {
+  background-color: black;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  top: 28px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: black;
+  
+}
+
+.hamburger span::before,
+.hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: black;
+  content: "";
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.hamburger span::before {
+  top: -20px;
+  transition-property: top, transform;
+}
+
+.hamburger span::after {
+  bottom: -20px;
+  transition-property: bottom, transform;
+}
+
+.hamburger:hover span {
+  background-color: white;
+}
+
+.hamburger:hover span::before,
+.hamburger:hover span::after {
+  background-color: white;
+}
+
+/* active state, i.e. menu open */
+.hamburger.is-active {
+  background-color: #cb0032;
+}
+
+.hamburger.is-active span {
+  background: none;
+}
+
+.hamburger.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.hamburger.is-active span::before,
+.hamburger.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+/*Down Arrow Icon CSS*/
+
+.downarrow {
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 47%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 64px;
+  height: 64px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: .7s;
+  z-index: 10;
+  opacity: 1;
+  transform: rotate(-90deg);
+  background-color: white;
+}
+
+.downarrow span {
+  display: block;
+  position: absolute;
+  top: 28px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: black;
+  
+}
+
+.downarrow:focus {
+  outline:none;
+}
+
+.downarrow span::before,
+.downarrow span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: black;
+  content: "";
+  width: 75%
+  
+}
+
+.downarrow span::before {
+  /*top: -20px;*/
+  transform-origin: top left;
+   top: 0;
+  transform: translateX(-8px) translateY(4px) rotate(-45deg)
+  
+}
+
+.downarrow span::after {
+  /*bottom: -20px;*/
+  transform-origin: bottom left;
+  transform: translateX(-8px) translateY(-4px) rotate(45deg);
+  bottom: 0;
+}
+
+.downarrow:hover {
+  background-color: black;
+}
+
+.downarrow:hover span {
+  background:white;
+}
+
+.downarrow:hover span::before,
+.downarrow:hover span::after {
+  background:white;
+}
+
+/*End of Hamburger and Down Arrow CSS*/
+  
+/*Navigation CSS*/
+
+.navigation {
+  font-size: 1em ;
+  height: 340px;
+  top: -340px;
+  text-align: center;
+  margin: 0;
+  background-color: rgba(255,255,255, .9); 
+  position: absolute;
+  z-index: 9;
+  transition: .7s;
+  left:0px;
+}
+
+.navigation li {
+  display: inline-block;
+  list-style: none;
+  line-height: .5em;
+  padding: 25px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: 2px;
+  font-size: 32px;
+}
+
+
+.navigation li:first-child  {
+  margin-left: 20px;
+}
+
+.navigation li:last-child {
+
+  /*margin-bottom: 20px;*/
+}
+
+
+.navigation a {
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+  transition: .7s;
+}
+
+.navigation.active {
+  top: 0px;
+}
+
+/*Hero Image container and main title*/
+.hero {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+  background-image: url("images/cliff.jpeg");
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.hero .container h1 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 80px;
+  line-height: 200px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 120px;
+}
+
+.hero .container p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 24px;
+  line-height: 100px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  font-family: 'Francois One', sans-serif;
+  margin-top: -80px;
+  margin-bottom: 0px;
+  line-height: 1em;
+
+}
+
+.hero .container {
+  width: 80%;
+  position: absolute;
+  left: 5%; 
+}
+
+#title {
+  font-size: 3em;
+  line-height: 1em;
+  position: relative;
+  top: -55px;
+}
+
+/*************START OF PORTFOLIO SECTION*************/
+
+.portfolioSection {
+  position: absolute;
+  top: 650px;
+  left: 0px;
+}
+
+#port {
+  font-family: 'Francois One', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.jorts {
+  width: 300px;
+  padding: 10px;
+  
+}
+
+.jortsimg {
+  width: 100%;
+}
+
+.jorts h2 {
+    text-align: center;
+  font-size: 36px;
+  font-weight: 300;
+  font-family: 'Francois One', sans-serif;
+  margin-bottom: 0px;
+  position: relative;
+  top: -20px;
+}
+
+.jorts a {
+  text-decoration: none;
+  color: black;
+  transition: .7s;
+}
+
+.jorts p {
+  position: relative;
+  top: -40px;
+  font-size: 18px;
+  font-family: 'PT Sans Caption', sans-serif;
+  text-align: center;
+}
+
+
+.portlink {
+  width: 100px;
+  opacity: .7;
+  transition: .7s;
+  position: relative;
+  top: -20px;
+  left: 8%;
+}
+
+.portlink:hover {
+  opacity: 1;
+}
+
+/******END PORTFOLIO SECTION**********/
+
+
+/******START ABOUT AND SKILLS SECTION**********/
+
+
+section.module {
+  margin-top: 0px;
+}
+section.module.parallax {
+  height: 400px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 64px;
+  line-height: 200px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 50px;
+}
+section.module.parallax-3 {
+  position: absolute;
+  width: 100%;
+  background-image: url("images/dylanheadshot.jpg");
+  top: 2400px;
+  height: 250px;
+}
+
+section.module.parallax-3 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+section.module.parallax-skills {
+  position: absolute;
+  top: 1400px;
+  width: 100%;
+  background-image: url("images/blacktexture.jpg");
+  height: 200px;
+}
+section.module.parallax-skills h1 {
+  line-height: 80px;
+}
+
+#skills {
+  position: relative;
+  top: 3500px;
+}
+.skills {
+  position: relative;
+  top: 3550px;
+  text-align: center;
+}
+
+.skills p {
+  width: 300px;
+  padding: 10px;
+  font-family: 'PT Sans Caption', sans-serif;
+}
+.skillsbutton {
+  width: 200px;
+  position: relative;
+  left: 1%;
+}
+
+.devbutton {
+  top: 15px;
+  padding-bottom: 10px; 
+}
+
+.library {
+  padding-top: 20px;
+}
+
+/******************START OF CONTACT SECTION****************/
+
+.contact_section {
+  position: relative;
+  top: 1200px;
+}
+
+#contact {
+    top: 2750px;
+    width: 100%;
+    position: relative;
+}
+
+.contact{
+  position: relative;
+  top:-50px;
+}
+.contact img {
+  width: 50px;
+}
+
+.eachcontact {
+  display: inline;
+  padding-left: 25px; 
+}
+
+#contact h2 {
+  font-size: 30px;
+  position: relative;
+  top: -60px;
+  font-family: 'Francois One', sans-serif;
+  text-align: center;
+}
+
+.contact {
+  width: 100%;
+  display: inline;
+
+}
+
+.phoneNumber {
+  font-size: 24px;
+  font-family: 'Francois One', sans-serif;
+  text-align: center;
+  position: relative;
+  top: -40px;
+}
+
+
+#footer {
+  position: absolute;
+  top: 5750px;
+  width: 100%;
+  height: 125px;
+  background-color: black;
+}
+
+.footer_hamburger {
+    display: block;
+  position: relative;
+  left: 43%;
+  top: -25px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 64px;
+  height: 64px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  transition: .3s;
+  z-index: 10;
+  transform: rotate(90deg);
+  border-radius: 34px;
+  background-color: black;
+}
+
+.footer_hamburger:focus {
+  outline: none;
+}
+
+.footer_hamburger span {
+  display: block;
+  position: absolute;
+  top: 28px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: black;
+  
+  
+}
+
+.footer_hamburger span::before,
+.footer_hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: white;
+  content: "";
+}
+
+.footer_hamburger span::before {
+  /*top: -20px;*/
+  transform-origin: top left;
+   top: 0;
+  transform: translateX(-8px) translateY(4px) rotate(-45deg)
+  
+}
+
+.footer_hamburger span::after {
+  /*bottom: -20px;*/
+  transform-origin: bottom left;
+  transform: translateX(-8px) translateY(-4px) rotate(45deg);
+  bottom: 0;
+}
+
+#footer ul {
+  position: relative;
+  top: -25px;
+}
+
+#footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding-right: 20px;
+  transition: .7s;
+}
+
+#footer ul li {
+  display: inline;
+  padding-bottom: 20px; 
+}
+
+
+}
+@media all and (min-width: 940px) {
+
+body {
+	background-image: url("images/brickwall.png");
+	background-attachment: fixed;
+}
+
+/*nav*/
+.navigation {
+  height: 64px;
+  padding: 0;
+  top: -128px;
+  width: 100%;
+}
+
+.navigation li {
+  font-size: 1.6em;
+  line-height: 60px;
+  height: 40px;
+  display: inline;
+}
+
+.navigation a:hover {
+  text-shadow:
+      3px 3px 0 #7F7E7E,
+      -1px -1px 0 #7F7E7E,  
+      1px -1px 0 #7F7E7E,
+      -1px 1px 0 #7F7E7E,
+      1px 1px 0 #7F7E7E;
+  text-decoration: underline;
+}
+
+/*Hero Section content*/
+
+.hero {
+  background-image: url("images/hero.jpeg"); 
+}
+
+.titleContainer{
+  position: relative;
+  top: -100px;
+  margin-left: 80px;
+}
+
+#title {
+  opacity: 0;
+  transition: 1s;
+  font-size: 112px;
+  top: 50px;
+}
+
+
+#title.visible {
+  opacity: 1;
+  top: 0px;
+}
+
+#about {
+  opacity: 0;
+  transition: 1s;
+  font-size: 48px;
+  position: relative;
+  top: 70px;
+}
+
+#about.visible {
+  opacity: 1;
+  top: 20px;
+}
+
+.downarrow {
+  opacity: 0;
+  position: relative;
+  top: 100px;
+}
+
+.downarrow.visible{
+  opacity: 1;
+  top: 50px;
+}
+
+.portfolioSection {
+  /*Setting invisible to start on desktop version*/
+  opacity: 0;
+  transition: display 1.5s ease;
+  -webkit-transition: display 1.5s ease;
+  -moz-transition: display 1.5s ease;
+  -o-transition: display 1.5s ease;
+}
+
+.portfolioSection.visible {
+  position: absolute;
+  top: 650px;
+  opacity: 1;
+  transition: 3s;
+}
+
+#port {
+  font-size: 48px;
+}
+
+.jorts {
+	width: 30%;
+	display: inline-block;
+	padding: 1%;
+	text-align: center;
+	position: relative;
+	transition: .7s;
+  margin-left: 10px;
+}
+
+.jorts h2 {
+	text-align: center;
+  font-size: 36px;
+  font-weight: 300;
+  font-family: 'Francois One', sans-serif;
+  margin-bottom: 0px;
+  position: relative;
+  top: -20px;
+}
+
+.jorts a {
+	text-decoration: none;
+	color: black;
+	transition: .7s;
+}
+
+.jorts a:hover {
+	color: #D0333E;
+	text-decoration: underline;
+}
+
+.jortsimg {
+  width:100%;
+  height: 200px;
+  border: solid 5px black;
+}
+
+.jorts p {
+  position: relative;
+  top: -40px;
+  font-size: 18px;
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+.portlink {
+  width: 100px;
+  opacity: .7;
+  transition: .7s;
+  position: relative;
+  top: -20px;
+  left:0px;
+}
+
+.portlink:hover {
+  opacity: 1;
+}
+/*skills/about styles*/
+
+#skills {
+  top: 1300px;
+}
+
+.skills {
+  top: 1350px;
+}
+
+.about_me {
+  opacity: 0;
+  transition: 2s;
+  font-size: 24px;
+}
+
+.skills p {
+  width: 800px;
+  margin-left: 200px;
+}
+
+.about_me.visible {
+  opacity: 1;
+}
+
+.skillsbutton {
+  width: 200px;
+  padding-right: 100px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.devbutton {
+  position: relative;
+  top: 53px;
+  margin-left: 120px;
+  left:-200px;
+}
+
+.devbutton.visible {
+  opacity: 1;
+  left: 0px;
+}
+
+.design {
+  position: relative;
+  left: -300px;
+}
+
+.design.visible {
+  left: 0px;
+  opacity: 1;
+}
+
+.library {
+  position: relative;
+  left: -300px;
+}
+
+.library.visible {
+  opacity: 1;
+  left: 0px;
+}
+
+.skills_container {
+  display: inline;
+}
+
+/*CONTACT INFO SECTION*/
+
+#contact h2 {
+  font-size: 36px;
+}
+
+.contact_section {
+  position: relative;
+  top: -950px;
+}
+
+.parallax-3 p {
+  font-size: 80px;
+  display: inline;
+  position: relative;
+  top: 50px;
+}
+
+.eachcontact {
+  padding-left: 60px;
+}
+
+.eachcontact img {
+  width: 80px;
+}
+
+.contact {
+  position: relative;
+  left: 325px;
+  top: -40px;
+}
+
+.contact img:hover {
+	box-shadow: 5px 5px 3px #888888 inset;
+  	-webkit-box-shadow: 5px 5px 3px #888888;
+  	-moz-box-shadow: 5px 5px 3px #888888;
+}
+
+.overlay {
+	position:absolute;
+	opacity: 0;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:rgba(239, 239, 239, .8);
+  transition: .7s;
+}
+
+.text {
+	text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.itemDescription{
+  margin-bottom: 0px;
+}
+
+.jorts:hover .overlay {
+	opacity: 1;
+}
+
+#footer {
+  top: 2950px;
+}
+
+
+.footer_hamburger {
+  left: 600px;
+}
+.footer_hamburger:hover {
+  background-color: white;
+}
+
+.footer_hamburger:hover span {
+  background:white;
+}
+
+.footer_hamburger:hover span::before,
+.footer_hamburger:hover span::after {
+  background:black;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+/*lightbox css*/
+
+#lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport */
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background: rgba(0,0,0,.7);
+    text-align:center;
+    z-index: 9999;
+}
+
+#lightbox p {
+    text-align:right; 
+    color:#fff; 
+    margin-right:20px; 
+    font-size:12px; 
+}
+
+#lightbox img {
+    box-shadow:0 0 25px #111;
+    -webkit-box-shadow:0 0 25px #111;
+    -moz-box-shadow:0 0 25px #111;
+    max-width:940px;
+}
+
+#wrapper.blur {
+  z-index: 100;
+      -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+}
+
+
+
