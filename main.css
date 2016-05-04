@@ -579,6 +579,187 @@ section.module.parallax-skills h1 {
 
 
 }
+/*Galaxy s5 media query*/
+@media all and (min-width: 360px){
+  .hero .container {
+    left : 10%;
+  }
+
+  .downarrow {
+    left: 110px;
+  }
+
+  .jorts {
+    padding-left: 25px;
+  }
+
+  .about_me {
+    position: relative;
+    left: 10px;
+  }
+
+  #footer ul {
+    top: -50px;
+  }
+
+  #footer ul li {
+    padding: 10px;
+    display: inline-block;
+  }
+}
+
+/*Iphone6 media query*/
+
+@media all and (min-width: 375px) {
+  .navigation li {
+    display: block;
+    position: relative;
+    left: -40px;
+  }
+
+  .navigation {
+    width: 375px;
+  }
+
+  .downarrow {
+    left: 120px;
+  }
+
+  .jorts {
+    padding-left: 40px;
+  }
+
+  .about_me {
+    position: relative;
+    left: 20px;
+  }
+}
+
+/*Nexus 5 x media Query*/
+
+@media all and (min-width: 411px) {
+  .navigation {
+    height: 200px;
+  }
+
+  .downarrow {
+    left: 135px;
+  }
+
+  .jorts {
+    padding-left: 55px;
+  }
+
+  .about_me {
+    position: relative;
+    left: 42px;
+  }
+
+  .contact{
+    left: 25px;
+  }
+
+  .skillsbutton {
+    position: relative;
+    left: 80px;
+    display: block;
+  }
+
+  .about_me {
+    position: relative;
+    left: 30px;
+  }
+}
+
+/*Iphone 6plus Media Query*/
+
+@media all and (min-width: 414px) {
+  .navigation {
+    height: 350px;
+  }
+
+  .jorts {
+    padding-left: 40px;
+  }
+}
+
+/*Nexus 6p Media Query*/
+
+@media all and (min-width: 435px) {
+  .jorts {
+    padding-left: 65px;
+  }
+
+  .skillsbutton{
+    padding-right: 0px;
+    position: relative;
+    display: block;
+    left: 100px;
+  }
+}
+
+/*Ipad Medai Query*/
+
+@media all and (min-width: 768px) {
+  .navigation {
+    width: 730px;
+    top: -350px;
+  }
+
+  #title {
+    position: relative;
+    left: -50px;
+    padding-bottom: 30px;
+  }
+
+  #about {
+    position: relative;
+    left: -50px;
+    padding-bottom: 30px;
+  }
+
+  .downarrow {
+    position: relative;
+    left: 220px;
+  }
+
+  .jorts {
+   padding-left: 180px;
+  }
+
+  .portfolio_headline {
+    position: relative;
+    left: 85px;
+  }
+
+  .skills p{
+   width: 500px;
+   position: relative;
+   left: 70px;
+  }
+
+  .skillsbutton {
+    left: 235px;
+  }
+
+  .contact {
+    position: relative;
+    left: 170px;
+  }
+
+  #contact h2 {
+    position: relative;
+    left: -40px;
+  }
+
+  #contact p {
+    position: relative;
+    left: -40px;
+  }
+}
+
+
+/*Desktop Media Query*/
 @media all and (min-width: 940px) {
 
 body {
