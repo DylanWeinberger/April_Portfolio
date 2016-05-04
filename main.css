@@ -834,6 +834,7 @@ body {
   opacity: 0;
   position: relative;
   top: 100px;
+  left: 400px;
 }
 
 .downarrow.visible{
@@ -855,6 +856,11 @@ body {
   top: 650px;
   opacity: 1;
   transition: 3s;
+}
+
+.portfolio_headline {
+  position: relative;
+  left: 0px;
 }
 
 #port {
@@ -947,6 +953,7 @@ body {
   padding-right: 100px;
   opacity: 0;
   transition: 1s;
+  display: inline;
 }
 
 .devbutton {
