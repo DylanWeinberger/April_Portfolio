@@ -350,6 +350,13 @@
   opacity: 1;
 }
 
+.mewlawlink {
+  position: relative;
+  left: 70px;
+  top: -40px;
+  opacity: .4;
+}
+
 /******END PORTFOLIO SECTION**********/
 
 
@@ -922,6 +929,12 @@ body {
 
 .portlink:hover {
   opacity: 1;
+}
+
+.mewlawlink {
+  position: relative;
+  top: -40px;
+  opacity: .5;
 }
 /*skills/about styles*/
 
