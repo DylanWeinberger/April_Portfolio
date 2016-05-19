@@ -1,4 +1,8 @@
 // media query
+$(window).load(function(){
+  $('#loading').fadeOut(2000);
+});
+
 $(document).ready(function(){
 var mq = window.matchMedia('(max-width: 700px)');
 if (mq.matches) {
